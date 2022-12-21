@@ -8,8 +8,12 @@ import { useState, useEffect } from 'react'; // useState ayuda a saber
  */
 
 export default function Welcome({ message, name }) {
-  let [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(0);
   const [semaforo, setSemaforo] = useState(false);
+
+  useEffect (()=>{
+    console.log(semaforo)
+  }, [semaforo])
 
   const contar = ()=>{
      setCounter(counter+1)
